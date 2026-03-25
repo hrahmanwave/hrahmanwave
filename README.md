@@ -51,4 +51,3 @@ My goal is to bridge the gap between numerical modeling research and actionable 
 
 ---
 
-<p align="center"><i>Open to funded M.Sc./Ph.D. opportunities in coastal/water resources engineering.</i></p>
