@@ -1,6 +1,6 @@
 # Hi, I'm Md Hasanur Rahman 👋
 
-**Researcher** at the [Institute of Water and Flood Management (IWFM)](http://www.iwfm.buet.ac.bd/), Bangladesh University of Engineering and Technology (BUET)
+**Researcher** at the [Institute of Water and Flood Management (IWFM)](https://iwfm.buet.ac.bd/site/), Bangladesh University of Engineering and Technology (BUET)
 
 ---
 
@@ -50,4 +50,4 @@ I am driven by the conviction that the most sophisticated models are only as val
 
 ---
 
-<p align="center"><i>Open to funded M.Sc./Ph.D. opportunities in coastal/water resources engineering.</i></p>
+
