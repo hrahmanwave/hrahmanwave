@@ -1,53 +1,71 @@
-# Hi, I'm Md Hasanur Rahman 👋
+# Hi, I'm Hasan 👋
 
-**Researcher** at the [Institute of Water and Flood Management (IWFM)](https://iwfm.buet.ac.bd/site/), Bangladesh University of Engineering and Technology (BUET)
+**I build physics-aware machine learning models for floods and storm surge.**
 
----
+I'm a PhD student in Civil and Environmental Engineering at the University of Louisville, working on
+**differentiable hydrology**: models that couple neural networks with process-based equations and learn
+from data end to end, so they stay physically interpretable while gaining the accuracy of deep learning.
+Before my PhD I built high-resolution **Delft3D storm surge models** for the Bay of Bengal coast at IWFM, BUET.
 
-### About Me
-
-The Bay of Bengal coast of Bangladesh is one of the most hazard-exposed coastlines on the planet. Tropical cyclones, storm surges, compound flooding, and sea-level variability threaten over 35 million people living across the low-lying Ganges-Brahmaputra-Meghna delta. Producing reliable, high-resolution predictions of these events is one of the most demanding challenges in coastal science today, and that is exactly what my research is built around.
-
-I am a researcher at **IWFM, BUET**, where I develop and operate **high-resolution coastal hydrodynamic models** using **Delft3D** to simulate cyclone-induced storm surges across some of the most complex and data-scarce tidal environments in South Asia. My modeling work covers the full pipeline: from raw bathymetry processing and DEM integration across multiple projections (UTM 46N, Gulshan 303/BTM), through multi-domain decomposition setups with nested grids exceeding 700×700 cells, to tidal boundary calibration validated against observed water levels at coastal stations. I have applied physically motivated wind drag formulations (Vatvani et al., 2012) and systematically tuned numerical parameters to achieve stable, convergent solutions under extreme cyclone forcing. 
-
-On the data side, I have built complete **rainfall forcing pipelines** for hydrodynamic models, processing daily and 3-hourly gauge observations from the Bangladesh Meteorological Department (35+ stations) through Thiessen polygon interpolation with cosine-latitude area correction, and hourly temporal disaggregation using SCS Type-II and Huff First-Quartile methods validated against observed storm rainfall patterns. I also work with **Sentinel-1 SAR imagery** through Google Earth Engine for rapid post-disaster **flood inundation mapping**, and I develop geospatial automation tools using **Python** and **ArcPy** for cyclone track generation, cross-section extraction, and reproducible spatial analysis workflows.
-
-My research vision extends beyond classical physics-based modeling. I am actively interested in integrating **AI and machine learning** with numerical models to build faster, more adaptive **early warning systems** for compound coastal hazards, where surge, rainfall, and river discharge interact simultaneously. I bring a strong analytical foundation in **game theory** and **statistics**, which I apply to multi-stakeholder decision-making in disaster management and resource allocation under uncertainty. I am also experienced in **water quality assessment** using GIS and remote sensing techniques.
-
-I am driven by the conviction that the most sophisticated models are only as valuable as their ability to reach the communities that need them. My long-term goal is to advance the science of coastal hazard prediction while making that science operationally useful for early warning, land-use planning, and climate adaptation in deltaic regions worldwide.
+The thread through both: keep the physics, make it learnable, make it fast enough for early warning.
 
 ---
 
-### Research Interests
+### Differentiable and ML hydrology (PhD)
 
-`Storm Surge Modeling (Delft3D)` · `Cyclone Impact Assessment` · `Flood Inundation Mapping (SAR)` · `Rainfall Forcing for Hydrodynamic Models` · `GIS & Remote Sensing in Water Resources` · `Water Quality` · `Compound Hazard Analysis` · `Early Warning Systems` · `AI & Machine Learning in Hydrology` · `Game Theory & Decision Analysis` · `Statistical Modeling` · `Disaster Risk Reduction`
+**Differentiable parameter learning.** Neural networks that learn the parameters of conceptual hydrologic
+models from basin attributes and forcing, trained through the model with automatic differentiation.
+
+**Stream temperature and routing.** Differentiable stream temperature modeling coupled with river routing
+through basin networks.
+
+**Deep learning for streamflow.** LSTM and attention-based models on large-sample datasets (CAMELS),
+evaluated across basins with NSE and KGE.
+
+### Coastal hazard modeling (before PhD)
+
+**Storm surge.** Delft3D-FLOW for cyclone surge in data-scarce tidal estuaries: bathymetry and DEM integration,
+multi-domain decomposition with nested grids, tidal boundary calibration against coastal gauges, and wind-drag
+formulations for extreme cyclone forcing.
+
+**Forcing and observations.** Gauge rainfall pipelines for model forcing, extreme water levels from tide gauges,
+and flood mapping from Sentinel-1 SAR.
+
+### Where they meet
+
+Physics-aware ML surrogates for storm surge and compound flooding: fast enough for operational warning,
+constrained by the hydrodynamics.
 
 ---
 
-### Tools & Technologies
+### Public projects
 
-`Delft3D` · `Python` · `ArcGIS / ArcPy` · `Google Earth Engine` · `MATLAB` · `LaTeX`
+Most of my PhD code lives in private lab repositories. These are public:
 
----
+| Project | What it does |
+| --- | --- |
+| [coastal-extremes-gev](https://github.com/hrahmanwave/coastal-extremes-gev) | Extreme water levels from tide gauges: GEV/GPD fits and return levels |
+| [sentinel1-flood-py](https://github.com/hrahmanwave/sentinel1-flood-py) | Flood mapping from Sentinel-1 SAR with Google Earth Engine, in Python |
+| [delft3d-dd-boundary-enforcer](https://github.com/hrahmanwave/delft3d-dd-boundary-enforcer) | Consistent bathymetry across Delft3D domain decomposition boundaries |
+| [bmd-rainfall-processing](https://github.com/hrahmanwave/bmd-rainfall-processing) | Gauge rainfall to hydrodynamic model forcing (Thiessen polygons + temporal disaggregation) |
+| [cyclone-tracks-arcpy](https://github.com/hrahmanwave/cyclone-tracks-arcpy) | Cyclone track polylines from best-track lat–lon data with ArcPy |
+| [us-weather-explorer](https://github.com/hrahmanwave/us-weather-explorer) | Live forecast maps and automatic highlights from ECMWF Open Data ([open the page](https://hrahmanwave.github.io/us-weather-explorer/)) |
 
-### Featured Repositories
+### Methods and tools
 
-| Repository | Description |
-|---|---|
-| [cyclone-tracks-arcpy](https://github.com/hrahmanwave/cyclone-tracks-arcpy) | Generate cyclone track polylines from lat–lon CSV data using ArcPy |
-| [sentinel1-flood-detection](https://github.com/hrahmanwave/sentinel1-flood-detection) | Sentinel-1 SAR flood inundation mapping using Google Earth Engine |
-| [delft3d-dd-boundary-enforcer](https://github.com/hrahmanwave/delft3d-dd-boundary-enforcer) | Enforce consistent bathymetry at Delft3D domain decomposition boundaries |
-| [bmd-rainfall-processing](https://github.com/hrahmanwave/bmd-rainfall-processing) | Process BMD gauge rainfall data for hydrodynamic model forcing |
-| [dhaka-uhi-analysis](https://github.com/hrahmanwave/dhaka-uhi-analysis) | Urban Heat Island (UHI) analysis for Dhaka using LST and remote sensing |
+**Methods:** differentiable modeling, LSTM and attention models, physics-based hydrodynamic modeling,
+extreme value analysis, SAR change detection
 
----
+**Tools:** `PyTorch` `Python` `xarray` `Delft3D` `Google Earth Engine` `ArcGIS / ArcPy` `MATLAB` `LaTeX`
 
-### Find Me
+### Publications
 
-[![ResearchGate](https://img.shields.io/badge/ResearchGate-00CCBB?style=flat&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/Md-Rahman-1059)
+See [Google Scholar](https://scholar.google.com/citations?user=Kc736lkAAAAJ&hl).
+
+### Get in touch
+
+Happy to talk about differentiable modeling, storm surge, and ML for flood hazards.
+
+[![Website](https://img.shields.io/badge/Website-4285F4?style=flat&logo=googlechrome&logoColor=white)](https://sites.google.com/view/rahmanhasanur/home)
 [![Google Scholar](https://img.shields.io/badge/Google_Scholar-4285F4?style=flat&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=Kc736lkAAAAJ&hl)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/hrahmanwave)
-
----
-
-
+[![ResearchGate](https://img.shields.io/badge/ResearchGate-00CCBB?style=flat&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/Md-Rahman-1059)
